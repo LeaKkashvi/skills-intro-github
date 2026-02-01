@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 30px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+}
+
+.planet-list {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.planet-list h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+#planetList {
+    list-style: none;
+}
+
+#planetList li {
+    padding: 12px 15px;
+    margin: 8px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#planetList li:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+}
+
+#planetList li.active {
+    background: rgba(100, 150, 255, 0.4);
+    border-left: 4px solid #64a0ff;
+}
+
+.planet-details {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    min-height: 400px;
+}
+
+.details-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.details-content h3 {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #64a0ff;
+}
+
+.details-content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.planet-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.info-item {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.info-item strong {
+    display: block;
+    color: #64a0ff;
+    margin-bottom: 5px;
+}
+
+.placeholder {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.placeholder h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.placeholder p {
+    font-size: 1.1rem;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+}
